@@ -39,3 +39,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
     // clear data in local storage 
     export const clearLocalStorage = key => localStorage.removeItem(key);
   ```
+
+### Updating - "force" render with Todo is updated
+
+  ```
+    const [, forceUpdate] = React.useState(true);
+
+    const handleCompletion = () => { 
+        todo.done = !todo.done;  
+        updateTodoInLocalStorage();
+
+         // rerenders which Icon is showing for status
+        forceUpdate(n => !n);
+    };
+  ```

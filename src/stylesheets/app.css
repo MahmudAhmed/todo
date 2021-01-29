@@ -34,6 +34,10 @@
 
 /* Todo List Items */
 
+.strikethrough {
+    text-decoration:line-through;
+}
+
 .item-container {
     display: flex;
     justify-content: space-between;
@@ -42,10 +46,26 @@
 }
 .item-icons-container {
     display: flex;
-    width: 15%;
+    width: 10%;
     justify-content: space-between;
 }
 
 .item-icons-container > div {
     cursor: pointer;
+}
+
+/* Todo List Details */
+
+.item-detail-header {
+    display: flex;
+}
+
+#edit-icon-container {
+    position: relative;
+}
+
+#edit-icon {
+    position: absolute;
+    top: 12px;
+    right: -30px;
 }

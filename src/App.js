@@ -36,13 +36,17 @@ function App() {
     setTodoList(newList)
 
     // saving to local storage
-    saveToLocalStorage("todo_list", newList)
+    saveToLocalStorage("todo_list", newList);
   }
 
   const removeFromList = (id) => {
-    const filteredList = todoList.filter( todo => todo.id !== id )
+    const filteredList = todoList.filter( todo => todo.id !== id );
     setTodoList(filteredList);
-    saveToLocalStorage("todo_list", filteredList)
+    saveToLocalStorage("todo_list", filteredList);
+  }
+
+  const updateTodoInLocalStorage = () => {
+    saveToLocalStorage("todo_list", todoList);
   }
 
   return (
@@ -50,7 +54,7 @@ function App() {
       <div className="app"> 
         <Header />
         <TextField addToList={ addToList } />
-        <TodoList todoList={todoList} removeFromList={removeFromList}/>
+        <TodoList todoList={todoList} removeFromList={removeFromList} updateTodoInLocalStorage={updateTodoInLocalStorage}/>
       </div>
     </div>
   );
