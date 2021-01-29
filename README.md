@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `yarn install` or `npm install`
 
-Make sure to install all dependencies first**
+To install all dependencies. 
 
 
 ### `yarn start` or `npm start`
