@@ -29,7 +29,8 @@ function App() {
     // nomalizing our new todo
     const todoItem = {
       id: latestId + 1,
-      title: todo
+      title: todo,
+      due: new Date(),
     }
 
     const newList = [...todoList, todoItem];

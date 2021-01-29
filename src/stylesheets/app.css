@@ -69,3 +69,11 @@
     top: 12px;
     right: -30px;
 }
+
+
+/* Todo List Due Date */
+
+.item-due-date-header {
+    display: flex;
+}
+

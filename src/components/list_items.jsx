@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 import { faSquare } from '@fortawesome/free-regular-svg-icons';
 import Details from './details';
+import DueDate from './due_date';
 
 function ListItem({ todo, removeFromList, updateTodoInLocalStorage }) {
 
@@ -28,10 +29,7 @@ function ListItem({ todo, removeFromList, updateTodoInLocalStorage }) {
         <div className="item-container">
             <div>
                 <Details updateTodoInLocalStorage={updateTodoInLocalStorage} todo={todo}/>
-                <div className="due-date-container" >
-                    <h2>Due Date:</h2>
-                    {todo.due ? <p>todo.due</p> : <p>Add a due date</p>}
-                </div>
+                <DueDate updateTodoInLocalStorage={updateTodoInLocalStorage} todo={todo} />
             </div>
             <div className="item-icons-container">
                 <div>{todo.done ? <FontAwesomeIcon icon={faCheckSquare} onClick={() => handleCompletion()} /> : 
