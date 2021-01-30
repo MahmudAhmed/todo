@@ -11,8 +11,10 @@ function Details ({ todo, updateTodoInLocalStorage }) {
 
     const handleDetailChange = (e) => { setDetails(e.target.value) }
 
-    const handleDetailSubmit = () => {
+    const handleDetailSubmit = (e) => {
+        e.preventDefault();
         todo.details = details;
+        setEditMode(false);
         updateTodoInLocalStorage();
         forceUpdate(n => !n);
     }

@@ -34,7 +34,9 @@ export const addToList = ({ todo, todoList, setTodoList}) => {
 
 export const removeFromList = (todoToDelete, { todoList, setTodoList, }) => {
     const filteredList = todoList.filter(todo => todo.id !== todoToDelete.id);
-
+    debugger
+    setTodoList(filteredList);
+    saveToLocalStorage("todo_list", filteredList);
     if (todoToDelete.file) {
         // delete attachment from Storage 
         const storageRef = storage.ref()
@@ -43,11 +45,7 @@ export const removeFromList = (todoToDelete, { todoList, setTodoList, }) => {
             setTodoList(filteredList);
             saveToLocalStorage("todo_list", filteredList);
         })
-    } else {
-        setTodoList(filteredList);
-        saveToLocalStorage("todo_list", filteredList);
-    }
-
+    } 
 }
 
 export const filterByDone = ({ todoList, setFilteredList}) => {

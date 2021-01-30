@@ -11,10 +11,9 @@
 }
 
 .app {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     max-width: 720px;
     width: 100%;
-    height: 80%;
     background-color: #c0e218;
     overflow: scroll;
     border-radius: .25rem;
@@ -36,11 +35,13 @@
 
 .header {
     text-align: center;
-    border-bottom: 1px dotted #f37121; 
+
 }
 
 .header > h1 {
     color: #111d5e; 
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-bottom: 20px;
 }
 
 /* Text Field */
@@ -140,11 +141,13 @@
     margin: 10px;
     border-radius: .25rem !important;
     border-bottom: 1px solid rgba(0,0,0,.125) !important;
+    background: transparent !important;
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .item-icons-container {
@@ -159,12 +162,21 @@
 
 /* Details */
 
+.data-container {
+    min-height: 370px;
+}
+
 .item-detail-header {
     display: flex;
 }
 
 .item-detail-container {
     margin-bottom: 10px;
+}
+
+.item-detail-container  p {
+    font-family: 'Gloria Hallelujah', cursive;
+    word-break: break-word;
 }
 
 .details-h2 {
@@ -182,9 +194,6 @@
     cursor: pointer;
 }
 
-#add-description-text {
-
-}
 
 textarea {
   width: 100%;
@@ -194,6 +203,7 @@ textarea {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 10px;
+  background: white;
 }
 
 input[type="submit"] {
@@ -209,15 +219,22 @@ input[type="submit"] {
 
 /* Todo List Due Date */
 
+.due-date-container {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
 .item-due-date-header {
     display: flex;
 }
+
 
 
 /* File Attachment */
 
 .attachment-container {
     display: flex;
+    font-family: 'Gloria Hallelujah', cursive;
+    /* word-break: break-word; */
 }
 
 /* Emojis */
@@ -240,20 +257,50 @@ input[type="submit"] {
     font-weight: 100;
 }
 
+/* Footer */
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons-container  a {
+    padding: 10px;
+    font-size: 30px;
+}
+
+#author-signature{
+    font-family: 'Gloria Hallelujah', cursive;
+
+}
+
 /* Mobile Optimation */
 
 
 @media only screen and (max-width: 420px) {
+
+    .app {
+        height: 100%;
+    }
 
     .item-container {
         display: block;
     }
     .item-left-container {
         margin-bottom: 20px;
+        min-width: 250px;
     }
 
     .item-right-container {
         width: 100%;
+        padding-left: 0;
     }
 
     .item-icons-container {

@@ -66,7 +66,7 @@ function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStor
 
 
     return (
-        <div>
+        <div className="data-container">
             { todoList.length === 0 ? (
                 <div className="emoji-container">
                     <div>{emoji}</div>

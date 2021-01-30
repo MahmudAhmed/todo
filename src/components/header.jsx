@@ -4,7 +4,7 @@ function Header() {
     return (
         <div className="header-container">
             <div className="header">
-                <h1>Todo List</h1>
+                <h1>QuickList</h1>
             </div>
         </div>
     );
