@@ -41,17 +41,21 @@ function App() {
     saveToLocalStorage("todo_list", newList);
   }
 
-  const removeFromList = (id) => {
-    const todo = todoList.find( todo => todo.id === id);
-    const filteredList = todoList.filter( todo => todo.id !== id );
-
-    // delete attachment from Storage 
-    const storageRef = storage.ref()
-    const fileRef = storageRef.child(todo.file);
-    fileRef.delete().then(() => {
+  const removeFromList = (todoToDelete) => {
+    const filteredList = todoList.filter(todo => todo.id !== todoToDelete.id );
+    
+    if (todoToDelete.file) {
+      // delete attachment from Storage 
+      const storageRef = storage.ref()
+      const fileRef = storageRef.child(todoToDelete.file);
+      fileRef.delete().then(() => {
+        setTodoList(filteredList);
+        saveToLocalStorage("todo_list", filteredList);
+      })
+    } else {
       setTodoList(filteredList);
       saveToLocalStorage("todo_list", filteredList);
-    })
+    }
 
   }
 
