@@ -5,6 +5,7 @@ function TextField({ addToList, todoList, setTodoList}) {
     const handleChange = e => { setTodo(e.target.value) };
 
     const handleSubmit = e => {
+        e.preventDefault();
         if(todo !== "") {
             addToList({todo, todoList, setTodoList});
             setTodo("");

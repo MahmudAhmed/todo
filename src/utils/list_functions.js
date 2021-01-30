@@ -1,5 +1,6 @@
 import { saveToLocalStorage } from "./local_storage"
 import { storage } from '../base';
+import { EMOJIS } from "./emojis";
 
 export const addToList = ({ todo, todoList, setTodoList}) => {
     let latestId = 0;
@@ -57,4 +58,8 @@ export const filterByDone = ({ todoList, setFilteredList}) => {
 export const filterByInc = ({ todoList, setFilteredList }) => {
     const filteredList = todoList.filter(todo => !todo.done);
     setFilteredList(filteredList);
+}
+
+export const randomSelectEmoji = () => {
+    return EMOJIS[Math.floor(Math.random() * EMOJIS.length)]
 }

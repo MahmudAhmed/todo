@@ -5,7 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background-image:  radial-gradient(#444CF7 0.9500000000000001px, transparent 0.9500000000000001px), radial-gradient(#444CF7 0.9500000000000001px, #E5E5F7 0.9500000000000001px);
+    background-size: 38px 38px;
+    background-position: 0 0,19px 19px;
 }
 
 .app {
@@ -211,7 +213,25 @@ input[type="submit"] {
     display: flex;
 }
 
+/* Emojis */
 
+.emoji-container {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+}
+
+.emoji-container > div {
+    font-size: 120px;
+    font-weight: 100;
+    margin: 40px 0;
+}
+
+.emoji-container > p {
+    font-size: 50px;
+    font-weight: 100;
+}
 /* Mobile Optimation */
 
 
@@ -230,6 +250,14 @@ input[type="submit"] {
 
     .item-icons-container {
         width: 20%;
+    }
+
+    .emoji-container > div {
+        font-size: 60px;
+    }
+
+    .emoji-container > p {
+        font-size: 25px;
     }
 }
 
