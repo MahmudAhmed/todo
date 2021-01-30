@@ -5,6 +5,7 @@ import Header from "./components/header"
 import TextField from "./components/text_field"
 import TodoList from "./components/todo_list"
 import { saveToLocalStorage, fetchFromLocalStorage } from "./utils/local_storage"
+import { storage } from './base';
 
 function App() {
 
@@ -41,9 +42,17 @@ function App() {
   }
 
   const removeFromList = (id) => {
+    const todo = todoList.find( todo => todo.id === id);
     const filteredList = todoList.filter( todo => todo.id !== id );
-    setTodoList(filteredList);
-    saveToLocalStorage("todo_list", filteredList);
+
+    // delete attachment from Storage 
+    const storageRef = storage.ref()
+    const fileRef = storageRef.child(todo.file);
+    fileRef.delete().then(() => {
+      setTodoList(filteredList);
+      saveToLocalStorage("todo_list", filteredList);
+    })
+
   }
 
   const updateTodoInLocalStorage = () => {

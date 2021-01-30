@@ -22,9 +22,7 @@ function TodoList({ todoList, removeFromList, updateTodoInLocalStorage }) {
                         </Card>
                     ))
                 }
-            </Accordion>
-                
-            
+            </Accordion>  
         </div>
     )
 }

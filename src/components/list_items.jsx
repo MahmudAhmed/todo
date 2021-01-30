@@ -4,6 +4,7 @@ import { faTrash, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 import { faSquare } from '@fortawesome/free-regular-svg-icons';
 import Details from './details';
 import DueDate from './due_date';
+import FileUpload from './file_upload';
 
 function ListItem({ todo, removeFromList, updateTodoInLocalStorage }) {
 
@@ -30,12 +31,15 @@ function ListItem({ todo, removeFromList, updateTodoInLocalStorage }) {
             <div>
                 <Details updateTodoInLocalStorage={updateTodoInLocalStorage} todo={todo}/>
                 <DueDate updateTodoInLocalStorage={updateTodoInLocalStorage} todo={todo} />
+                <FileUpload updateTodoInLocalStorage={updateTodoInLocalStorage} todo={todo} />
             </div>
             <div className="item-icons-container">
                 <div>{todo.done ? <FontAwesomeIcon icon={faCheckSquare} onClick={() => handleCompletion()} /> : 
                     <FontAwesomeIcon icon={faSquare} onClick={() => handleCompletion()} /> }</div>
                 <div><FontAwesomeIcon icon={faTrash} onClick={() => removeFromList(todo.id)} /></div>
             </div>
+
+            
         </div>
     )
 }
