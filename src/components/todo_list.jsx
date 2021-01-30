@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ListItem from "./list_items"
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function TodoList({ todoList, removeFromList, updateTodoInLocalStorage }) {
+function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStorage }) {
     return (
         <div>
             <Accordion>
@@ -16,7 +16,13 @@ function TodoList({ todoList, removeFromList, updateTodoInLocalStorage }) {
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey={key + 1}>
                                 <Card.Body>
-                                    <ListItem todo={todo} removeFromList={removeFromList} updateTodoInLocalStorage={updateTodoInLocalStorage}/>
+                                    <ListItem 
+                                        todo={todo} 
+                                        todoList={todoList} 
+                                        removeFromList={removeFromList} 
+                                        setTodoList={setTodoList} 
+                                        updateTodoInLocalStorage={updateTodoInLocalStorage}
+                                    />
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>

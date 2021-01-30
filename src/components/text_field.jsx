@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 
-function TextField({addToList}) {
-    const [value, setValue] = useState('');
-    const handleChange = e => { setValue(e.target.value) };
+function TextField({ addToList, todoList, setTodoList}) {
+    const [todo, setTodo] = useState('');
+    const handleChange = e => { setTodo(e.target.value) };
 
     const handleSubmit = e => {
-        if(value !== "") {
-            addToList(value);
-            setValue("");
+        if(todo !== "") {
+            addToList({todo, todoList, setTodoList});
+            setTodo("");
         } else {
-            alert("Todo Can't be Black!");
+            alert("Todo can't be blank!");
         }
     }
 
@@ -20,7 +20,7 @@ function TextField({addToList}) {
                 type="text" 
                 placeholder="get milk" 
                 onChange={handleChange} 
-                value={value}
+                value={todo}
             />
             <button onClick={handleSubmit}>+ Add Todo</button>
         </div>

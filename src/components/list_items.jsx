@@ -6,7 +6,7 @@ import Details from './details';
 import DueDate from './due_date';
 import FileUpload from './file_upload';
 
-function ListItem({ todo, removeFromList, updateTodoInLocalStorage }) {
+function ListItem({ todo, removeFromList, updateTodoInLocalStorage, setTodoList, todoList}) {
 
     const [, forceUpdate] = React.useState(true);
 
@@ -36,7 +36,7 @@ function ListItem({ todo, removeFromList, updateTodoInLocalStorage }) {
             <div className="item-icons-container">
                 <div>{todo.done ? <FontAwesomeIcon icon={faCheckSquare} onClick={() => handleCompletion()} /> : 
                     <FontAwesomeIcon icon={faSquare} onClick={() => handleCompletion()} /> }</div>
-                <div><FontAwesomeIcon icon={faTrash} onClick={() => removeFromList(todo)} /></div>
+                <div><FontAwesomeIcon icon={faTrash} onClick={() => removeFromList(todo, {setTodoList, todoList})} /></div>
             </div>
 
             
