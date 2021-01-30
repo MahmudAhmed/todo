@@ -4,11 +4,9 @@ function Flagg({ todo, updateTodoInLocalStorage, forceUpdate }) {
     const [flagged, toggleFlag] = useState(todo.flagged);
 
     const handleChange = () => {
-        debugger
         todo.flagged = !flagged;
         toggleFlag(!flagged);
         updateTodoInLocalStorage();
-        console.log(todo)
         forceUpdate(n => !n);
     }
 
