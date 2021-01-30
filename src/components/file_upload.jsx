@@ -24,14 +24,22 @@ function FileUpload({ todo, updateTodoInLocalStorage}) {
         const storageRef = storage.ref()
         const fileRef = storageRef.child(todo.file);
         fileRef.delete().then(() => {
-            setAttachment(null)
+            todo.url = "";
+            todo.file = "";
+            setAttachment(null);
+            updateTodoInLocalStorage();
         })
     }
 
     return (
         <div>
-            { attachment ? <a href={todo.url} target="_blank" rel="noreferrer" >{attachment}</a> : <input type="file" onChange={handleUpload} /> }
-            <div onClick={handleDelete}>X</div>
+            { attachment ? (
+                <div className="attachment-container">
+                    <a href={todo.url} target="_blank" rel="noreferrer" >{attachment}</a>
+                    <p onClick={handleDelete}>X</p>
+                </div>
+            
+            ) : <input type="file" onChange={handleUpload} /> }
         </div>
         
     );

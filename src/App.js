@@ -43,7 +43,7 @@ function App() {
 
   const removeFromList = (todoToDelete) => {
     const filteredList = todoList.filter(todo => todo.id !== todoToDelete.id );
-    
+
     if (todoToDelete.file) {
       // delete attachment from Storage 
       const storageRef = storage.ref()
