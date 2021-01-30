@@ -10,11 +10,13 @@ function ListItem({ todo, removeFromList, updateTodoInLocalStorage, setTodoList,
 
     return (
         <div className="item-container">
-            <div>
+            <div className="item-left-container" >
                 <Details updateTodoInLocalStorage={updateTodoInLocalStorage} todo={todo}/>
                 <DueDate updateTodoInLocalStorage={updateTodoInLocalStorage} todo={todo} />
-            </div>    
-            <FileUpload updateTodoInLocalStorage={updateTodoInLocalStorage} todo={todo} />      
+            </div> 
+            <div className="item-right-container" >
+                <FileUpload updateTodoInLocalStorage={updateTodoInLocalStorage} todo={todo} /> 
+            </div>     
         </div>
     )
 }

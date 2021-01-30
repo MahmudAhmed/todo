@@ -16,7 +16,7 @@
     background-color: #c0e218;
     overflow: scroll;
     border-radius: .25rem;
-
+    min-width: 375px;
 }
 
 .fill-window {
@@ -69,6 +69,25 @@
     justify-content: space-between;
     width: 100%;
     
+}
+
+.item-left-container {
+    width: 100%;
+}
+
+.item-right-container {
+    width: 60%;
+}
+
+
+/* Attachment */
+
+.attachment-container > a {
+    padding-right: 10px;
+}
+
+#cross-mark {
+    font-size: medium;
 }
 
 /* Filter Menu */
@@ -191,4 +210,28 @@ input[type="submit"] {
 .attachment-container {
     display: flex;
 }
+
+
+/* Mobile Optimation */
+
+
+@media only screen and (max-width: 420px) {
+
+    .item-container {
+        display: block;
+    }
+    .item-left-container {
+        margin-bottom: 20px;
+    }
+
+    .item-right-container {
+        width: 100%;
+    }
+
+    .item-icons-container {
+        width: 20%;
+    }
+}
+
+
 
