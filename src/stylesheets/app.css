@@ -78,7 +78,7 @@
 }
 
 .item-right-container {
-    width: 60%;
+    width: 100%;
 }
 
 
@@ -90,6 +90,7 @@
 
 #cross-mark {
     font-size: medium;
+    cursor: pointer;
 }
 
 /* Filter Menu */
@@ -173,6 +174,7 @@
 #edit-icon {
     position: absolute;
     right: -30px;
+    cursor: pointer;
 }
 
 #add-description-text {

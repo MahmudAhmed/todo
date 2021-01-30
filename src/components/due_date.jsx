@@ -25,7 +25,7 @@ function DueDate({ todo, updateTodoInLocalStorage }) {
         <div className="due-date-container" >
             <div className="item-due-date-header">
                 <h2 className="details-h2">Due Date</h2>
-                <div id="edit-icon-container" onClick={() => setEditMode(!editMode)}><FontAwesomeIcon id="edit-icon" icon={faEdit} /></div>
+                <div title="Edit Due Date" id="edit-icon-container" onClick={() => setEditMode(!editMode)}><FontAwesomeIcon id="edit-icon" icon={faEdit} /></div>
             </div>
             <div className="due-date-container">
                 {
