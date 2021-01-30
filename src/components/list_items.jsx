@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faTrash, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
-// import { faSquare } from '@fortawesome/free-regular-svg-icons';
+import React from 'react';
 import Details from './details';
 import DueDate from './due_date';
 import FileUpload from './file_upload';
 
-function ListItem({ todo, removeFromList, updateTodoInLocalStorage, setTodoList, todoList}) {
+function ListItem({ todo, updateTodoInLocalStorage}) {
 
     return (
         <div className="item-container">

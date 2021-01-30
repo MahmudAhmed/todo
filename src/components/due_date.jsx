@@ -6,7 +6,7 @@ import {
     KeyboardDatePicker,
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
-
+ 
 
 function DueDate({ todo, updateTodoInLocalStorage }) {
     const [, forceUpdate] = React.useState(true);
@@ -20,6 +20,25 @@ function DueDate({ todo, updateTodoInLocalStorage }) {
         updateTodoInLocalStorage();
     }
 
+    const dateSelection = () => {
+        return (
+            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                <KeyboardDatePicker
+                    margin="normal"
+                    id="date-picker-dialog"
+                    label="Select a due date"
+                    format="MM/dd/yyyy"
+                    value={dueDate}
+                    onChange={handleDateSelection}
+                    minDate={new Date()}
+                    KeyboardButtonProps={{
+                        'aria-label': 'change date',
+                    }}
+                />
+            </MuiPickersUtilsProvider>
+        )
+    }
+
 
     return (
         <div className="item-due-date-container" >
@@ -29,22 +48,7 @@ function DueDate({ todo, updateTodoInLocalStorage }) {
             </div>
             <div className="due-date-container">
                 {
-                    editMode ? (
-                        <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                            <KeyboardDatePicker
-                                margin="normal"
-                                id="date-picker-dialog"
-                                label="Select a due date"
-                                format="MM/dd/yyyy"
-                                value={dueDate}
-                                onChange={handleDateSelection}
-                                minDate={new Date()}
-                                KeyboardButtonProps={{
-                                    'aria-label': 'change date',
-                                }}
-                            />
-                        </MuiPickersUtilsProvider>
-                    ) : <div>{new Date(dueDate).toLocaleDateString('en-US')}</div>
+                    editMode ? dateSelection() : (dueDate ? <p>{new Date(dueDate).toLocaleDateString('en-US')}</p> : <div id="add-due-date-text" onClick={() => setEditMode(!editMode)}><p>Click to add a due date</p></div>)
                 }
             </div>
 

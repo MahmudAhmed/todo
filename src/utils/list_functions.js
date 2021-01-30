@@ -4,7 +4,6 @@ import { EMOJIS } from "./emojis";
 
 export const addToList = ({ todo, todoList, setTodoList}) => {
     let latestId = 0;
-    const date = new Date();
     // gets the latest id from our list in state. 
     if (todoList.length === 1) {
         latestId = 1;
@@ -22,7 +21,6 @@ export const addToList = ({ todo, todoList, setTodoList}) => {
     const todoItem = {
         id: latestId + 1,
         title: todo,
-        due: new Date(date.setDate(date.getDate() + 1)),
     }
 
     const newList = [...todoList, todoItem];

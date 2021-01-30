@@ -51,9 +51,6 @@ function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStor
                             <Card.Body>
                                 <ListItem
                                     todo={todo}
-                                    todoList={todoList}
-                                    removeFromList={removeFromList}
-                                    setTodoList={setTodoList}
                                     updateTodoInLocalStorage={updateTodoInLocalStorage}
                                 />
                             </Card.Body>
