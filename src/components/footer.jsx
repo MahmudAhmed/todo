@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faLinkedin,
     faGithubSquare,
-    faMedium
 } from "@fortawesome/free-brands-svg-icons";
+import {
+    faUserCircle
+} from "@fortawesome/free-solid-svg-icons";
 
 const PROFILES = [
     {
@@ -17,7 +19,7 @@ const PROFILES = [
     },
     {
         url: "https://mahmudahmed.com",
-        icon: faMedium
+        icon: faUserCircle
     }
 ]
 export const Footer = () => {
