@@ -1,7 +1,7 @@
 /* App.js */
 
 .app-container {
-    background-color: gray;
+    background-color: #d3e0ea;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,9 @@
     max-width: 720px;
     width: 100%;
     height: 80%;
-    background-color: green;
+    background-color: #c0e218;
+    overflow: scroll;
+    border-radius: .25rem;
 
 }
 
@@ -29,14 +31,38 @@
 
 .header {
     text-align: center;
-    border-bottom: 1px dotted black; 
+    border-bottom: 1px dotted #f37121; 
+}
+
+.header > h1 {
+    color: #111d5e; 
+}
+
+/* Text Field */
+
+.text-field-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#text-input {
+    background-color: white;
+    padding: 10px 10px;
+    width: 50%;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+#text-field-btn {
+    background-color: #111d5e;
+    padding: 10px 15px;
+    color: white;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
 }
 
 /* Todo List Items */
-
-.strikethrough {
-    text-decoration:line-through;
-}
 
 .item-container {
     display: flex;
@@ -44,6 +70,56 @@
     width: 100%;
     
 }
+
+/* Filter Menu */
+
+.filter-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.filter-menu > li {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.filter-menu > li:hover {
+    color: #f37121;
+}
+
+.selected {
+    color: #f37121 !important;
+}
+
+
+/* Accordion */
+
+.flagged {
+    background: #c70039;
+    color: white;
+}
+
+.strikethrough {
+    text-decoration:line-through;
+}
+
+.card {
+    margin: 10px;
+    border-radius: .25rem !important;
+    border-bottom: 1px solid rgba(0,0,0,.125) !important;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .item-icons-container {
     display: flex;
     width: 10%;

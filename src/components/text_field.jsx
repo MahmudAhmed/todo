@@ -14,15 +14,16 @@ function TextField({ addToList, todoList, setTodoList}) {
     }
 
     return (
-        <div>
+        <div className="text-field-container">
             <input 
                 name="title"
                 type="text" 
-                placeholder="get milk" 
+                placeholder="i.e. get milk" 
+                id="text-input"
                 onChange={handleChange} 
                 value={todo}
             />
-            <button onClick={handleSubmit}>+ Add Todo</button>
+            <button id="text-field-btn" onClick={handleSubmit}>Add</button>
         </div>
     )}
 
