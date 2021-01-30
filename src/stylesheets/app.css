@@ -130,10 +130,19 @@
     cursor: pointer;
 }
 
-/* Todo List Details */
+/* Details */
 
 .item-detail-header {
     display: flex;
+}
+
+.item-detail-container {
+    margin-bottom: 10px;
+}
+
+.details-h2 {
+    font-size: 16px !important;
+    font-weight: bold;
 }
 
 #edit-icon-container {
@@ -142,8 +151,31 @@
 
 #edit-icon {
     position: absolute;
-    top: 12px;
     right: -30px;
+}
+
+#add-description-text {
+
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  border: none;
+  background: #111d5e;
+  padding: 8px 17px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
 }
 
 

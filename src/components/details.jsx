@@ -9,7 +9,6 @@ function Details ({ todo, updateTodoInLocalStorage }) {
     const [details, setDetails] = React.useState(todo.details ? todo.details : "");
     const [editMode, setEditMode] = React.useState(false);
 
-
     const handleDetailChange = (e) => { setDetails(e.target.value) }
 
     const handleDetailSubmit = () => {
@@ -31,10 +30,10 @@ function Details ({ todo, updateTodoInLocalStorage }) {
     return (
         <div className="item-detail-container" >
             <div className="item-detail-header">
-                <h2>Discription</h2>
+                <h2 className="details-h2">Discription</h2>
                 <div id="edit-icon-container" onClick={() => setEditMode(!editMode)}><FontAwesomeIcon id="edit-icon" icon={faEdit} /></div>
             </div>
-            {todo.details ? (editMode ? detailsForm() : <p>{todo.details}</p>) : detailsForm()}
+            { editMode ? detailsForm() : (todo.details ? <p>{todo.details}</p> : <div id="add-description-text" onClick={() => setEditMode(!editMode)}><p>Click to add a description</p></div>) }
         </div>
     )
 }
