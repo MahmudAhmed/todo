@@ -53,3 +53,43 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
         forceUpdate(n => !n);
     };
   ```
+
+### Uploading Files to Cloud Storage 
+
+  ```
+    const handleUpload = (e) => {
+        const file = e.target.files[0];
+        const storageRef = storage.ref()
+        const fileRef = storageRef.child(file.name);
+        fileRef.put(file).then(() => {
+            storageRef.child(file.name).getDownloadURL()
+                .then((url) => {
+                    todo.url = url;
+                    todo.file = file.name;
+                    setAttachment(todo.file)
+                    updateTodoInLocalStorage();
+                })
+            })
+        }
+  ```
+
+### Deleting Storage File associated with Todo
+
+  ```
+    const removeFromList = (todoToDelete) => {
+      const filteredList = todoList.filter(todo => todo.id !== todoToDelete.id );
+      
+      if (todoToDelete.file) {
+        // delete attachment from Storage 
+        const storageRef = storage.ref()
+        const fileRef = storageRef.child(todoToDelete.file);
+        fileRef.delete().then(() => {
+          setTodoList(filteredList);
+          saveToLocalStorage("todo_list", filteredList);
+        })
+      } else {
+        setTodoList(filteredList);
+        saveToLocalStorage("todo_list", filteredList);
+      }
+    }
+  ```
