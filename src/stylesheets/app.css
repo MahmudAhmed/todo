@@ -129,7 +129,7 @@
 /* Accordion */
 
 .flagged {
-    background: #c70039;
+    background: #c70039 !important;
     color: white;
 }
 

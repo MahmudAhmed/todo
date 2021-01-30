@@ -39,7 +39,12 @@ function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStor
             {
                 todoList.map((todo, key) => (
                     <Card>
-                        <Accordion.Toggle as={Card.Header} eventKey={key + 1} id={`todo#${todo.id}`} className={todo.done ? "strikethrough" : ""}>
+                        <Accordion.Toggle 
+                            as={Card.Header} 
+                            eventKey={key + 1} 
+                            id={`todo#${todo.id}`} 
+                            className={[todo.done ? "strikethrough" : "", todo.flagged ? "flagged" : ""].join(" ")}
+                        >
                             {todo.title}
                             <div className="item-icons-container">
                                 <div>{todo.done ? <FontAwesomeIcon icon={faCheckSquare} onClick={(e) => handleCompletion(e, todo)} /> :
@@ -52,6 +57,7 @@ function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStor
                                 <ListItem
                                     todo={todo}
                                     updateTodoInLocalStorage={updateTodoInLocalStorage}
+                                    forceUpdate={forceUpdate}
                                 />
                             </Card.Body>
                         </Accordion.Collapse>

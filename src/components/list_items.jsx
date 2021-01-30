@@ -2,8 +2,9 @@ import React from 'react';
 import Details from './details';
 import DueDate from './due_date';
 import FileUpload from './file_upload';
+import Flagg from './flagg';
 
-function ListItem({ todo, updateTodoInLocalStorage}) {
+function ListItem({ todo, updateTodoInLocalStorage, forceUpdate}) {
 
     return (
         <div className="item-container">
@@ -13,6 +14,7 @@ function ListItem({ todo, updateTodoInLocalStorage}) {
             </div> 
             <div className="item-right-container" >
                 <FileUpload updateTodoInLocalStorage={updateTodoInLocalStorage} todo={todo} /> 
+                <Flagg updateTodoInLocalStorage={updateTodoInLocalStorage} forceUpdate={forceUpdate} todo={todo}/>
             </div>     
         </div>
     )
