@@ -231,6 +231,10 @@ input[type="submit"] {
 
 /* File Attachment */
 
+.file-upload-container {
+    margin-bottom: 10px;
+}
+
 .attachment-container {
     display: flex;
     font-family: 'Gloria Hallelujah', cursive;
@@ -316,5 +320,41 @@ input[type="submit"] {
     }
 }
 
+.label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #394a56;
+}
 
+.label-text {
+  margin-left: 16px;
+}
 
+.toggle {
+  isolation: isolate;
+  position: relative;
+  height: 30px;
+  width: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+
+}
+
+.toggle-state {
+  display: none;
+}
+
+.indicator {
+  height: 100%;
+  width: 200%;
+  background: #c70039;
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+}
+
+.toggle-state:checked ~ .indicator {
+  transform: translate3d(25%, 0, 0);
+}

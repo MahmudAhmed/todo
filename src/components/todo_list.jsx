@@ -11,7 +11,6 @@ import { randomSelectEmoji } from "../utils/list_functions";
 function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStorage }) {
 
     const [, forceUpdate] = React.useState(true);
-    const [emoji] = React.useState(randomSelectEmoji());
 
     const handleCompletion = (e, todo) => {
         e.stopPropagation();
@@ -72,7 +71,7 @@ function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStor
         <div className="data-container">
             { todoList.length === 0 ? (
                 <div className="emoji-container">
-                    <div>{emoji}</div>
+                    <div>{randomSelectEmoji()}</div>
                     <p>No Task's Found</p>
                 </div>
             ) : displayAccordian() } 
