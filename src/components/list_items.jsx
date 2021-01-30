@@ -34,7 +34,7 @@ function ListItem({ todo, removeFromList, updateTodoInLocalStorage }) {
             <div className="item-icons-container">
                 <div>{todo.done ? <FontAwesomeIcon icon={faCheckSquare} onClick={() => handleCompletion()} /> : 
                     <FontAwesomeIcon icon={faSquare} onClick={() => handleCompletion()} /> }</div>
-                <div onClick={() => removeFromList(todo.id)} ><FontAwesomeIcon icon={faTrash} /></div>
+                <div><FontAwesomeIcon icon={faTrash} onClick={() => removeFromList(todo.id)} /></div>
             </div>
         </div>
     )

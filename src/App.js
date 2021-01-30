@@ -12,7 +12,7 @@ function App() {
 
   const addToList = (todo) => {
     let latestId = 0;
-
+    const date = new Date();
     // gets the latest id from our list in state. 
     if (todoList.length === 1) {
       latestId = 1;
@@ -30,7 +30,7 @@ function App() {
     const todoItem = {
       id: latestId + 1,
       title: todo,
-      due: new Date(),
+      due: new Date(date.setDate(date.getDate() + 1)),
     }
 
     const newList = [...todoList, todoItem];
