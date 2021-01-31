@@ -38,7 +38,47 @@ npm start (`yarn start` for mac users)
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## Features 
 
+### Adding a new todo item
+
+<p align="center">
+  <img width="600" height="500" src="./assets/ql-3.png">
+</p>
+
+Enter task title in the Text Input and click "ADD".
+
+### Adding Details to Item
+
+<p align="center">
+  <img width="600" height="500" src="./assets/ql-2.png">
+</p>
+
+Add todo first, and then you can edit details in dropdown. 
+
+### Adding Due Date
+
+<p align="center">
+  <img width="600" height="500" src="./assets/ql-5.png">
+</p>
+
+### Flag items that are a priority
+
+<p align="center">
+  <img width="600" height="500" src="./assets/ql-4.png">
+</p>
+
+### Mark todo items as complete
+
+<p align="center">
+  <img width="600" height="500" src="./assets/ql-7.png">
+</p>
+
+### Attach file to todo item
+
+<p align="center">
+  <img width="600" height="500" src="./assets/ql-6.png">
+</p>
   
 ## Code 
 
