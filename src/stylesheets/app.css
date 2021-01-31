@@ -160,11 +160,11 @@
     background: transparent !important;
 }
 
-.card-header {
+/* .card-header {
     display: flex;
     justify-content: space-between;
     font-family: 'Gloria Hallelujah', cursive;
-}
+} */
 
 .item-icons-container {
     display: flex;
@@ -186,7 +186,8 @@
 }
 
 #todo-title {
-    margin-bottom: 0;;
+    margin-bottom: 0;
+    text-transform: capitalize;
 }
 
 /* Details */
