@@ -71,7 +71,7 @@ function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStor
         <div className="data-container">
             { todoList.length === 0 ? (
                 <div className="emoji-container">
-                    <div>{randomSelectEmoji()}</div>
+                    <div id="emoji">{randomSelectEmoji()}</div>
                     <p>No Task's Found</p>
                 </div>
             ) : displayAccordian() } 

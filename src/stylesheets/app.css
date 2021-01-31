@@ -307,12 +307,12 @@ input[type="submit"] {
     flex-direction: column;
 }
 
-.emoji-container > div {
+#emoji {
     font-size: 120px;
-    font-weight: 100;
     margin: 40px 0;
-    font-family: "Open Sans",sans-serif;
-    font-weight: 200;
+    /* font-family: "Open Sans",sans-serif;
+    font-weight: 200 !important; */
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 .emoji-container > p {
@@ -386,7 +386,7 @@ input[type="submit"] {
         width: 20%;
     }
 
-    .emoji-container > div {
+    #emoji {
         font-size: 50px;
     }
 
