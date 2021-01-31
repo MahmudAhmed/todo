@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 <p align="center">
-  <img width="600" height="500" src="">
+  <img width="600" height="500" src="./assets/ql-1.png">
 </p>
 QuickList minimalistic single page Todo App, built with React.  
 
