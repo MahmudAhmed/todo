@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faCheckSquare, faSave } from '@fortawesome/free-solid-svg-icons';
 import { faSquare } from '@fortawesome/free-regular-svg-icons';
 
-function TodoTitle({ todo, handleRemoval, handleCompletion}) {
+function TodoTitle({ todo, handleRemoval, handleCompletion, updateTodoInLocalStorage}) {
 
     const [title, changeTitle] = useState(todo.title)
     const [editMode, setEditMode] = useState(false);
@@ -24,6 +24,13 @@ function TodoTitle({ todo, handleRemoval, handleCompletion}) {
         setEditMode(!editMode)
     };
 
+    const handleSubmit = (e) => {
+        e.stopPropagation();
+        todo.title = title;
+        setEditMode(false);
+        updateTodoInLocalStorage();
+    }
+
 
 
     return (
@@ -32,12 +39,20 @@ function TodoTitle({ todo, handleRemoval, handleCompletion}) {
             className={["todo-title-container", todo.done ? "strikethrough" : ""].join(" ")}
             >
             { editMode ? (
-                <input 
-                    onClick={e => e.stopPropagation()}
-                    type="text" 
-                    value={title} 
-                    onChange={handleChange} 
-                /> ) : <p id="todo-title" onClick={handleTitleClick} >{title}</p>}
+                <div class="todo-title-input-container">
+                    <input
+                        onClick={e => e.stopPropagation()}
+                        type="text"
+                        value={title}
+                        onChange={handleChange}
+                        autofocus
+                        id="title-input"
+                    /> 
+                    <button id="title-field-btn" onClick={handleSubmit}><FontAwesomeIcon icon={faSave} id="save-icon"/></button>
+                </div>
+                
+                
+            ) : <p id="todo-title" onClick={handleTitleClick} >{title}</p>}
             {displayIcons()}
         </div>
     );

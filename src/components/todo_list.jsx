@@ -41,7 +41,7 @@ function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStor
                             eventKey={key + 1} 
                             className={todo.flagged ? "flagged" : ""}
                         >
-                            <TodoTitle todo={todo} handleCompletion={handleCompletion} handleRemoval={handleRemoval} />
+                            <TodoTitle todo={todo} handleCompletion={handleCompletion} handleRemoval={handleRemoval} updateTodoInLocalStorage={updateTodoInLocalStorage}/>
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey={key + 1}>
                             <Card.Body>
