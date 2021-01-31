@@ -13,9 +13,9 @@ function Flagg({ todo, updateTodoInLocalStorage, forceUpdate }) {
     return (
         <div className="flagg-container">
             <h2 className="details-h2">Priority</h2>
-            <label class="label">
+            <label class="label" >
                 <div class="toggle">
-                    <input onChange={handleChange} class="toggle-state" type="checkbox" name="check" value="check" />
+                    <input onChange={handleChange} defaultChecked={flagged} class="toggle-state" type="checkbox" name="check" value="check" />
                     <div class="indicator"></div>
                 </div>
             </label>
