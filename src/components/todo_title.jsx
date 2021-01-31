@@ -6,6 +6,8 @@ import { faSquare } from '@fortawesome/free-regular-svg-icons';
 function TodoTitle({ todo, handleRemoval, handleCompletion}) {
 
     const [title, changeTitle] = useState(todo.title)
+    const [editMode, setEditMode] = useState(false);
+    const handleChange = e => { changeTitle(e.target.value) };
 
     const displayIcons = () => {
         return (
@@ -16,13 +18,26 @@ function TodoTitle({ todo, handleRemoval, handleCompletion}) {
             </div>
         )
     }
+
+    const handleTitleClick = (e) => {
+        e.stopPropagation();
+        setEditMode(!editMode)
+    };
+
+
+
     return (
         <div 
-            className="todo-title-container" 
             id={`todo#${todo.id}`}
             className={["todo-title-container", todo.done ? "strikethrough" : ""].join(" ")}
             >
-            <p id="todo-title">{title}</p>
+            { editMode ? (
+                <input 
+                    onClick={e => e.stopPropagation()}
+                    type="text" 
+                    value={title} 
+                    onChange={handleChange} 
+                /> ) : <p id="todo-title" onClick={handleTitleClick} >{title}</p>}
             {displayIcons()}
         </div>
     );

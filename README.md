@@ -205,3 +205,16 @@ Add todo first, and then you can edit details in dropdown.
       );
     }
   ```
+
+  ### Stoping Propagation 
+
+  To stop the accordian to open up when editing the title of todo.
+
+  ```
+    <input 
+      onClick={e => e.stopPropagation()}
+      type="text" 
+      value={title} 
+      onChange={handleChange} 
+    />
+  ```

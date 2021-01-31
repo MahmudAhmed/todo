@@ -183,12 +183,18 @@
     display: flex;
     justify-content: space-between;
     font-family: 'Gloria Hallelujah', cursive;
+    /* margin: 10px; */
+
 }
 
 #todo-title {
     margin-bottom: 0;
     text-transform: capitalize;
 }
+/* 
+#title-input {
+    margin: 10px;
+} */
 
 /* Details */
 
