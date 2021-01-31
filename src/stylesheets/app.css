@@ -403,9 +403,10 @@ input[type="submit"] {
     }
 
     #clear-data-btn {
-        position: absolute;
+        /* position: absolute;
         bottom: 25px;
-        right: 30px;
+        right: 30px; */
+        display: none;
     }
 }
 
