@@ -176,6 +176,19 @@
     cursor: pointer;
 }
 
+/* Todo Title */
+
+.todo-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+#todo-title {
+    margin-bottom: 0;;
+}
+
 /* Details */
 
 .data-container {

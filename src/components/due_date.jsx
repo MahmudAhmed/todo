@@ -9,9 +9,8 @@ import DateFnsUtils from '@date-io/date-fns';
  
 
 function DueDate({ todo, updateTodoInLocalStorage }) {
-    const [, forceUpdate] = React.useState(true);
-    const [editMode, setEditMode] = React.useState(false);
-    const [dueDate, changeDueDate] = React.useState(todo.due);
+    const [editMode, setEditMode] = useState(false);
+    const [dueDate, changeDueDate] = useState(todo.due);
 
     const handleDateSelection = (newDate) => {
         changeDueDate(newDate);

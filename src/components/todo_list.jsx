@@ -1,11 +1,9 @@
-import React from 'react'
-import ListItem from "./list_items"
-import Accordion from 'react-bootstrap/Accordion'
-import Card from 'react-bootstrap/Card'
+import React from 'react';
+import ListItem from "./list_items";
+import TodoTitle from "./todo_title";
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
-import { faSquare } from '@fortawesome/free-regular-svg-icons';
 import { randomSelectEmoji } from "../utils/list_functions";
 
 function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStorage }) {
@@ -41,15 +39,9 @@ function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStor
                         <Accordion.Toggle 
                             as={Card.Header} 
                             eventKey={key + 1} 
-                            id={`todo#${todo.id}`} 
-                            className={[todo.done ? "strikethrough" : "", todo.flagged ? "flagged" : ""].join(" ")}
+                            className={todo.flagged ? "flagged" : ""}
                         >
-                            {todo.title}
-                            <div className="item-icons-container">
-                                <div>{todo.done ? <FontAwesomeIcon icon={faCheckSquare} onClick={(e) => handleCompletion(e, todo)} /> :
-                                    <FontAwesomeIcon icon={faSquare} onClick={(e) => handleCompletion(e, todo)} />}</div>
-                                <div><FontAwesomeIcon icon={faTrash} onClick={(e) => handleRemoval(e, todo)} /></div>
-                            </div>
+                            <TodoTitle todo={todo} handleCompletion={handleCompletion} handleRemoval={handleRemoval} />
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey={key + 1}>
                             <Card.Body>
