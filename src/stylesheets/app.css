@@ -366,6 +366,7 @@ input[type="submit"] {
 
     .app {
         height: 100%;
+        max-height: 100%;
     }
 
     .item-container {
@@ -386,11 +387,25 @@ input[type="submit"] {
     }
 
     .emoji-container > div {
-        font-size: 60px;
+        font-size: 50px;
     }
 
     .emoji-container > p {
         font-size: 25px;
+    }
+
+    #footer {
+        display: none;
+    }
+
+    .clear-data-container {
+        position: unset;
+    }
+
+    #clear-data-btn {
+        position: absolute;
+        bottom: 25px;
+        right: 30px;
     }
 }
 
