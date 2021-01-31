@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faCheckSquare, faSave } from '@fortawesome/free-solid-svg-icons';
 import { faSquare } from '@fortawesome/free-regular-svg-icons';
 
-function TodoTitle({ todo, handleRemoval, handleCompletion, updateTodoInLocalStorage}) {
+function TodoTitle({ todo, handleRemoval, handleCompletion, updateTodoInLocalStorage, forceUpdate}) {
 
     const [title, changeTitle] = useState(todo.title)
     const [editMode, setEditMode] = useState(false);
+    debugger
     const handleChange = e => { changeTitle(e.target.value) };
 
     const displayIcons = () => {
@@ -26,9 +27,11 @@ function TodoTitle({ todo, handleRemoval, handleCompletion, updateTodoInLocalSto
 
     const handleSubmit = (e) => {
         e.stopPropagation();
-        todo.title = title;
+        todo.title = title; 
         setEditMode(false);
         updateTodoInLocalStorage();
+        forceUpdate(n => !n);
+
     }
 
 
@@ -43,7 +46,7 @@ function TodoTitle({ todo, handleRemoval, handleCompletion, updateTodoInLocalSto
                     <input
                         onClick={e => e.stopPropagation()}
                         type="text"
-                        value={title}
+                        value={todo.title}
                         onChange={handleChange}
                         autofocus
                         id="title-input"
@@ -52,7 +55,7 @@ function TodoTitle({ todo, handleRemoval, handleCompletion, updateTodoInLocalSto
                 </div>
                 
                 
-            ) : <p id="todo-title" onClick={handleTitleClick} >{title}</p>}
+            ) : <p id="todo-title" onClick={handleTitleClick} >{todo.title}</p>}
             {displayIcons()}
         </div>
     );

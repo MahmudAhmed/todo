@@ -7,7 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { randomSelectEmoji } from "../utils/list_functions";
 
 function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStorage }) {
-
+    debugger
+    // const [list, setList] = React.useState(todoList);
     const [, forceUpdate] = React.useState(true);
 
     const handleCompletion = (e, todo) => {
@@ -41,7 +42,13 @@ function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStor
                             eventKey={key + 1} 
                             className={todo.flagged ? "flagged" : ""}
                         >
-                            <TodoTitle todo={todo} handleCompletion={handleCompletion} handleRemoval={handleRemoval} updateTodoInLocalStorage={updateTodoInLocalStorage}/>
+                            <TodoTitle 
+                                todo={todo} 
+                                handleCompletion={handleCompletion} 
+                                handleRemoval={handleRemoval} 
+                                updateTodoInLocalStorage={updateTodoInLocalStorage} 
+                                forceUpdate={forceUpdate}
+                            />
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey={key + 1}>
                             <Card.Body>
