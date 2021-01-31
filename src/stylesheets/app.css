@@ -300,11 +300,13 @@ input[type="submit"] {
     font-size: 120px;
     font-weight: 100;
     margin: 40px 0;
+    color: #111d5e
 }
 
 .emoji-container > p {
+    font-family: 'Gloria Hallelujah', cursive;
     font-size: 50px;
-    font-weight: 100;
+    color: #111d5e;
 }
 
 /* Footer */
