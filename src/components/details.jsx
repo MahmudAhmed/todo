@@ -5,9 +5,8 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 function Details ({ todo, updateTodoInLocalStorage }) {
 
-    const [, forceUpdate] = React.useState(true);
-    const [details, setDetails] = React.useState(todo.details ? todo.details : "");
-    const [editMode, setEditMode] = React.useState(false);
+    const [details, setDetails] = useState(todo.details ? todo.details : "");
+    const [editMode, setEditMode] = useState(false);
 
     const handleDetailChange = (e) => { setDetails(e.target.value) }
 
@@ -16,7 +15,6 @@ function Details ({ todo, updateTodoInLocalStorage }) {
         todo.details = details;
         setEditMode(false);
         updateTodoInLocalStorage();
-        forceUpdate(n => !n);
     }
 
     const detailsForm = () => {

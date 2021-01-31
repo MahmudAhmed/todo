@@ -45,11 +45,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
   ```
     const [, forceUpdate] = React.useState(true);
 
-    const handleCompletion = () => { 
-        todo.done = !todo.done;  
+    const handleCompletion = (e, todo) => {
+        e.stopPropagation();
+        todo.done = !todo.done;
+
+        let element = document.getElementById(`todo#${todo.id}`);
+        if (todo.done) {
+            element.classList.add("strikethrough")
+        } else {
+            element.classList.remove("strikethrough")
+        }
         updateTodoInLocalStorage();
 
-         // rerenders which Icon is showing for status
+        // rerenders which Icon is showing for status.
         forceUpdate(n => !n);
     };
   ```
@@ -91,5 +99,26 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
         setTodoList(filteredList);
         saveToLocalStorage("todo_list", filteredList);
       }
+    }
+  ```
+
+  ### handling Form submission
+
+  ```
+    const handleDetailSubmit = (e) => {
+      e.preventDefault();
+      todo.details = details;
+      setEditMode(false);
+      updateTodoInLocalStorage();
+    }
+
+    const detailsForm = () => {
+      return (
+          <form onSubmit={handleDetailSubmit}>
+              <textarea value={details} onChange={handleDetailChange} 
+                  placeholder="add a description"/>
+              <input type="submit" value="Submit" />
+          </form>
+      );
     }
   ```
