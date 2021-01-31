@@ -1,18 +1,44 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# QuickList
+***
+
+## Description
+<p align="center">
+  <img width="600" height="500" src="">
+</p>
+QuickList minimalistic single page Todo App, built with React.  
+
+## Technologies
+* Frontend: JavaScript/React/Redux
+* HTML5/CSS
+* Webpack
+* Firebase - Storage
+
+## Installation 
+
+
+### Setting up
+Please run the following commands:
+```
+npm install (`yarn install` for mac users)
+```
+To install all dependencies. 
+
+
 ## To Run App on Local
 
 In the project directory, you can run:
 
-### `yarn install` or `npm install`
-
-To install all dependencies. 
-
-
-### `yarn start` or `npm start`
-
+### Running the app
+Please run the following commands in separate tabs:
+```
+npm start (`yarn start` for mac users)
+```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+
   
 ## Code 
 
