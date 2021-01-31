@@ -90,6 +90,12 @@ Add todo first, and then you can edit details in dropdown.
 <p align="center">
   <img width="300" height="150" src="./assets/ql-8.png">
 </p>
+
+### Mobile Optimized 
+
+<p align="center">
+  <img width="375" height="812" src="./assets/ql-mobile.png">
+</p>
   
 ## Code 
 
