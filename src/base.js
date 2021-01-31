@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAYBK-Ipxh_Iif98xu5AFFm9QJhzWzQKDk",
+    apiKey: process.env.REACT_APP_AUTH_TOKEN,
     authDomain: "todoapp-b01b7.firebaseapp.com",
     projectId: "todoapp-b01b7",
     storageBucket: "todoapp-b01b7.appspot.com",
