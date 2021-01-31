@@ -8,12 +8,16 @@
     background-image:  radial-gradient(#444CF7 0.9500000000000001px, transparent 0.9500000000000001px), radial-gradient(#444CF7 0.9500000000000001px, #E5E5F7 0.9500000000000001px);
     background-size: 38px 38px;
     background-position: 0 0,19px 19px;
+    /* overflow: scroll; */
 }
 
 .app {
+    overflow: scroll;
+    position: relative;
     padding: 20px 20px 0 20px;
     max-width: 720px;
     width: 100%;
+    height: 90%;
     background-color: #c0e218;
     overflow: scroll;
     border-radius: .25rem;
@@ -163,7 +167,7 @@
 /* Details */
 
 .data-container {
-    min-height: 370px;
+    min-height: 400px;
 }
 
 .item-detail-header {
@@ -285,6 +289,20 @@ input[type="submit"] {
 
 }
 
+/* Clear Data Trash Can*/
+
+.clear-data-container {
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+    color: #111d5e;
+}
+
+#clear-data-btn {
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+}
 /* Mobile Optimation */
 
 

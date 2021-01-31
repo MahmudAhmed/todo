@@ -5,12 +5,12 @@ import Header from "./components/header";
 import TextField from "./components/text_field";
 import TodoList from "./components/todo_list";
 import FilterMenu from "./components/filter_menu";
+import ClearData from "./components/clear_data";
 import { Footer } from "./components/footer";
 import { saveToLocalStorage, fetchFromLocalStorage } from "./utils/local_storage"
 import { addToList, removeFromList } from "./utils/list_functions";
 
 function App() {
-
   const [todoList, setTodoList] = useState(fetchFromLocalStorage("todo_list"));
   const [filteredList, setFilteredList] = useState(false);
   const updateTodoInLocalStorage = () => {
@@ -37,6 +37,7 @@ function App() {
           updateTodoInLocalStorage={updateTodoInLocalStorage}
         />
         <Footer />
+        <ClearData setTodoList={setTodoList}/>
       </div>
     </div>
   );
