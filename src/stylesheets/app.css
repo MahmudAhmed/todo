@@ -66,6 +66,8 @@
     width: 50%;
     border-top-left-radius: .25rem;
     border-bottom-left-radius: .25rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
 }
 
 #text-field-btn {
