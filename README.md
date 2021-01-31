@@ -43,7 +43,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### Adding a new todo item
 
 <p align="center">
-  <img width="600" height="500" src="./assets/ql-3.png">
+  <img width="300" height="50" src="./assets/ql-3.png">
 </p>
 
 Enter task title in the Text Input and click "ADD".
