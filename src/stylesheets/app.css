@@ -311,6 +311,8 @@ input[type="submit"] {
     font-size: 120px;
     font-weight: 100;
     margin: 40px 0;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 200;
 }
 
 .emoji-container > p {
