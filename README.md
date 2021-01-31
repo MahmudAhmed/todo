@@ -7,7 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <p align="center">
   <img width="600" height="500" src="./assets/ql-1.png">
 </p>
-QuickList minimalistic single page Todo App, built with React.  
+QuickList minimalistic single page Todo App, built with React. User are able to create multiple items that they want to remember to do and be able to add, edit, and remove tasks
+ 
 
 ## Technologies
 * Frontend: JavaScript/React/Redux
@@ -78,6 +79,16 @@ Add todo first, and then you can edit details in dropdown.
 
 <p align="center">
   <img width="300" height="100" src="./assets/ql-6.png">
+</p>
+
+<p align="center">
+  <img width="300" height="100" src="./assets/ql-9.png">
+</p>
+
+### Filtering by Status
+
+<p align="center">
+  <img width="300" height="150" src="./assets/ql-8.png">
 </p>
   
 ## Code 
