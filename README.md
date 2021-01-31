@@ -51,7 +51,7 @@ Enter task title in the Text Input and click "ADD".
 ### Adding Details to Item
 
 <p align="center">
-  <img width="300" height="200" src="./assets/ql-2.png">
+  <img width="300" height="100" src="./assets/ql-2.png">
 </p>
 
 Add todo first, and then you can edit details in dropdown. 
@@ -65,19 +65,19 @@ Add todo first, and then you can edit details in dropdown.
 ### Flag items that are a priority
 
 <p align="center">
-  <img width="300" height="200" src="./assets/ql-4.png">
+  <img width="300" height="100" src="./assets/ql-4.png">
 </p>
 
 ### Mark todo items as complete
 
 <p align="center">
-  <img width="300" height="200" src="./assets/ql-7.png">
+  <img width="300" height="100" src="./assets/ql-7.png">
 </p>
 
 ### Attach file to todo item
 
 <p align="center">
-  <img width="300" height="200" src="./assets/ql-6.png">
+  <img width="300" height="100" src="./assets/ql-6.png">
 </p>
   
 ## Code 
