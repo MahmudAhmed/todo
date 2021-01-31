@@ -32,7 +32,6 @@ export const addToList = ({ todo, todoList, setTodoList}) => {
 
 export const removeFromList = (todoToDelete, { todoList, setTodoList, }) => {
     const filteredList = todoList.filter(todo => todo.id !== todoToDelete.id);
-    debugger
     setTodoList(filteredList);
     saveToLocalStorage("todo_list", filteredList);
     if (todoToDelete.file) {
