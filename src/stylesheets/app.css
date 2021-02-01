@@ -468,7 +468,6 @@ input[type="submit"] {
     #calendar-toggle-container {
         transform: scale(0.65);
         right: -15px;
-        /* bottom: -50px; */
     }
 
     .calendar-toggle-container {
