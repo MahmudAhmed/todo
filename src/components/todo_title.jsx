@@ -7,7 +7,7 @@ function TodoTitle({ todo, handleRemoval, handleCompletion, updateTodoInLocalSto
 
     const [title, changeTitle] = useState(todo.title)
     const [editMode, setEditMode] = useState(false);
-    debugger
+
     const handleChange = e => { changeTitle(e.target.value) };
 
     const displayIcons = () => {
@@ -28,6 +28,7 @@ function TodoTitle({ todo, handleRemoval, handleCompletion, updateTodoInLocalSto
     const handleSubmit = (e) => {
         e.stopPropagation();
         todo.title = title; 
+        changeTitle(title)
         setEditMode(false);
         updateTodoInLocalStorage();
         forceUpdate(n => !n);
@@ -46,7 +47,7 @@ function TodoTitle({ todo, handleRemoval, handleCompletion, updateTodoInLocalSto
                     <input
                         onClick={e => e.stopPropagation()}
                         type="text"
-                        value={todo.title}
+                        value={title}
                         onChange={handleChange}
                         autofocus
                         id="title-input"

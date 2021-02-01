@@ -3,26 +3,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import {
     MuiPickersUtilsProvider,
-    KeyboardDatePicker,
+    KeyboardDateTimePicker,
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
  
 
 function DueDate({ todo, updateTodoInLocalStorage }) {
     const [editMode, setEditMode] = useState(false);
-    const [dueDate, changeDueDate] = useState(todo.due);
+    const [dueDate, changeDueDate] = useState(todo.date);
 
     const handleDateSelection = (newDate) => {
         changeDueDate(newDate);
         setEditMode(!editMode);
-        todo.due = newDate;
+        todo.date = newDate;
         updateTodoInLocalStorage();
     }
 
     const dateSelection = () => {
         return (
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                <KeyboardDatePicker
+                <KeyboardDateTimePicker
                     margin="normal"
                     id="date-picker-dialog"
                     label="Select a due date"

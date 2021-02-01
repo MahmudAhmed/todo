@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { randomSelectEmoji } from "../utils/list_functions";
 
 function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStorage }) {
-    debugger
     // const [list, setList] = React.useState(todoList);
     const [, forceUpdate] = React.useState(true);
 

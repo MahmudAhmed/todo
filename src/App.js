@@ -5,10 +5,11 @@ import Header from "./components/header";
 import TextField from "./components/text_field";
 import TodoList from "./components/todo_list";
 import FilterMenu from "./components/filter_menu";
-import ClearData from "./components/clear_data";
+import ClearData from "./components/clear_data_btn";
 import { Footer } from "./components/footer";
 import { saveToLocalStorage, fetchFromLocalStorage } from "./utils/local_storage"
 import { addToList, removeFromList } from "./utils/list_functions";
+import CalendarView from "./components/calendar_view";
 
 function App() {
   const [todoList, setTodoList] = useState(fetchFromLocalStorage("todo_list"));
@@ -20,6 +21,10 @@ function App() {
   return (
     <div className="app-container fill-window">
       <div className="app"> 
+        {/* <CalendarView todoList={todoList}/> */}
+
+
+
         <Header />
         <TextField 
           addToList={addToList} 
@@ -38,6 +43,8 @@ function App() {
         />
         <Footer />
         <ClearData setTodoList={setTodoList}/>
+
+
       </div>
     </div>
   );
