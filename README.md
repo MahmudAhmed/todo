@@ -64,7 +64,7 @@ Add todo first, and then you can edit details in dropdown.
 ### Adding Due Date
 
 <p align="center">
-  <img width="600" height="500" src="./assets/ql-5.png">
+  <img width="600" height="400" src="./assets/ql-5.png">
 </p>
 
 ### Flag items that are a priority
