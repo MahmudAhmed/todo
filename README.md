@@ -70,29 +70,25 @@ Add todo first, and then you can edit details in dropdown.
 ### Flag items that are a priority
 
 <p align="center">
-  <img width="300" height="100" src="./assets/ql-4.png">
+  <img width="620" height="300" src="./assets/ql-6.png">
 </p>
 
 ### Mark todo items as complete
 
 <p align="center">
-  <img width="300" height="100" src="./assets/ql-7.png">
+  <img width="800" height="300" src="./assets/ql-7.png">
 </p>
 
 ### Attach file to todo item
 
 <p align="center">
-  <img width="300" height="100" src="./assets/ql-6.png">
-</p>
-
-<p align="center">
-  <img width="300" height="100" src="./assets/ql-9.png">
+  <img width="460" height="400" src="./assets/ql-8.png">
 </p>
 
 ### Filtering by Status
 
 <p align="center">
-  <img width="300" height="150" src="./assets/ql-8.png">
+  <img width="700" height="300" src="./assets/ql-9.png">
 </p>
 
 ### Mobile Optimized 
