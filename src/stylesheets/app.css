@@ -61,6 +61,14 @@
     right: 10px;
 }
 
+.fc .fc-button-primary {
+    background-color: #111d5e !important;
+}
+
+.fc-v-event {
+    background-color: #111d5e !important;
+}
+
 /* Text Field */
 
 .text-field-container {
@@ -403,6 +411,7 @@ input[type="submit"] {
     bottom: 25px;
     right: 15px;
 }
+
 /* Mobile Optimation */
 
 
@@ -416,6 +425,33 @@ input[type="submit"] {
     #calendar-toggle-container {
         transform: scale(0.65);
     }
+
+    /* calendar view */
+
+    .view-container {
+        height: 100%;
+    }
+
+    .calendar-container {
+        height: 100%;
+    }
+
+    .calendar-container > div {
+        height: 100% !important;
+    }
+
+    .fc .fc-toolbar {
+        flex-direction: column;
+    }
+
+    .fc-toolbar-chunk {
+        transform: scale(0.85);
+    }
+
+    .fc .fc-media-screen .fc-direction-ltr .fc-theme-standard {
+        height: 100% !important;
+    }
+    
 
     .item-container {
         display: block;

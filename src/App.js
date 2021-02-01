@@ -14,33 +14,41 @@ import CalendarView from "./components/calendar_view";
 function App() {
   const [todoList, setTodoList] = useState(fetchFromLocalStorage("todo_list"));
   const [filteredList, setFilteredList] = useState(false);
+  const [calendarViewMode, setCalendarViewMode] = useState(false);
   const updateTodoInLocalStorage = () => {
     saveToLocalStorage("todo_list", todoList);
+  }
+
+  const displayListView = () => {
+    return (
+      <>
+        <FilterMenu
+          todoList={todoList}
+          setFilteredList={setFilteredList}
+        />
+        <TodoList
+          todoList={filteredList ? filteredList : todoList}
+          setTodoList={setTodoList}
+          removeFromList={removeFromList}
+          updateTodoInLocalStorage={updateTodoInLocalStorage}
+        />
+      </>
+    )
   }
 
   return (
     <div className="app-container fill-window">
       <div className="app"> 
-        {/* <CalendarView todoList={todoList}/> */}
-
-
-
-        <Header />
+        <Header setCalendarViewMode={setCalendarViewMode}/>
         <TextField 
           addToList={addToList} 
           todoList={todoList} 
           setTodoList={setTodoList}
         />
-        <FilterMenu 
-          todoList={todoList} 
-          setFilteredList={setFilteredList}
-        /> 
-        <TodoList 
-          todoList={filteredList ? filteredList : todoList}
-          setTodoList={setTodoList} 
-          removeFromList={removeFromList} 
-          updateTodoInLocalStorage={updateTodoInLocalStorage}
-        />
+        <div className="view-container">
+          {calendarViewMode ? <CalendarView todoList={todoList} /> : displayListView()}
+        </div>
+        
         <Footer />
         <ClearData setTodoList={setTodoList}/>
 

@@ -12,7 +12,7 @@ function FileUpload({ todo, updateTodoInLocalStorage}) {
         fileRef.put(file).then(() => {
             storageRef.child(file.name).getDownloadURL()
                 .then((url) => {
-                    todo.url = url;
+                    todo.attachmentUrl = url;
                     todo.file = file.name;
                     setAttachment(todo.file)
                     updateTodoInLocalStorage();
@@ -36,7 +36,7 @@ function FileUpload({ todo, updateTodoInLocalStorage}) {
             <h2 className="details-h2">Attachments</h2>
             { attachment ? (
                 <div className="attachment-container">
-                    <a href={todo.url} target="_blank" rel="noreferrer" >{attachment}</a>
+                    <a href={todo.attachmentUrl} target="_blank" rel="noreferrer" >{attachment}</a>
                     <p onClick={handleDelete} id="cross-mark">&#10060;</p>
                 </div>
             

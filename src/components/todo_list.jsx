@@ -27,7 +27,7 @@ function TodoList({ todoList, removeFromList, setTodoList, updateTodoInLocalStor
     };
 
     const handleRemoval = (e, todo) => {
-        e.stopPropagation();
+        e.stopPropagation(); // disable bubble up effect on your element clicks
         removeFromList(todo, { setTodoList, todoList })
     };
 
