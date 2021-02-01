@@ -14,8 +14,7 @@ function CalendarView({ todoList }) {
 
     return (
         <div className="calendar-container">
-            
-
+        
             <FullCalendar
                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
                 headerToolbar={{
