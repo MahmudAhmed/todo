@@ -22,6 +22,11 @@ function App() {
   const displayListView = () => {
     return (
       <>
+        <TextField
+          addToList={addToList}
+          todoList={todoList}
+          setTodoList={setTodoList}
+        />
         <FilterMenu
           todoList={todoList}
           setFilteredList={setFilteredList}
@@ -39,12 +44,7 @@ function App() {
   return (
     <div className="app-container fill-window">
       <div className="app"> 
-        <Header setCalendarViewMode={setCalendarViewMode}/>
-        <TextField 
-          addToList={addToList} 
-          todoList={todoList} 
-          setTodoList={setTodoList}
-        />
+        <Header setCalendarViewMode={setCalendarViewMode} />
         <div className="view-container">
           {calendarViewMode ? <CalendarView todoList={todoList} /> : displayListView()}
         </div>

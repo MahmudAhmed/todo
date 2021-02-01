@@ -4,6 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 
+
 function CalendarView({ todoList }) {
 
     const handleEventClick = (e) => {
@@ -11,9 +12,10 @@ function CalendarView({ todoList }) {
         e.jsEvent.preventDefault();
     }
 
-
     return (
         <div className="calendar-container">
+            
+
             <FullCalendar
                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
                 headerToolbar={{
@@ -21,7 +23,7 @@ function CalendarView({ todoList }) {
                     center: 'title',
                     right: 'dayGridMonth,timeGridWeek,timeGridDay'
                 }}
-                initialView='timeGridDay'
+                initialView='dayGridMonth'
                 allDayContent={false}
                 eventClick={handleEventClick}
                 events={todoList}

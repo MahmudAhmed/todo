@@ -61,11 +61,27 @@
     font-weight: bold;
 }
 
+.calendar-toggle-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #calendar-toggle-container {
     position: absolute;
     top: 10px;
     right: 10px;
 }
+
+#list-icon, #calendar-icon {
+    padding: 5px;
+    box-sizing: content-box;
+    transform: scale(1.5);
+    margin: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+
 
 .fc .fc-button-primary {
     background-color: #111d5e !important;
@@ -108,6 +124,20 @@
 .view-container {
     margin-top: 20px;
 }
+
+.fc-scroller::-webkit-scrollbar, .fc-scroller-liquid-absolute::-webkit-scrollbar {
+    display: none;
+} 
+
+.fc-scroller, .fc-scroller-liquid-absolute {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.fc-toolbar-title {
+    color: #f37121;
+}
+
 
 
 /* Todo List Items */
@@ -437,6 +467,7 @@ input[type="submit"] {
 
     #calendar-toggle-container {
         transform: scale(0.65);
+        right: -20px;
     }
 
     /* calendar view */
