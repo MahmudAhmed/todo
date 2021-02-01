@@ -467,7 +467,19 @@ input[type="submit"] {
 
     #calendar-toggle-container {
         transform: scale(0.65);
-        right: -20px;
+        right: -15px;
+        /* bottom: -50px; */
+    }
+
+    .calendar-toggle-container {
+        flex-direction: column;
+    }
+
+
+    .calendar-toggle-container > .flagg-container {
+        -ms-transform: rotate(50deg); /* IE 9 */
+        transform: rotate(50deg);
+        margin: 10px;
     }
 
     /* calendar view */
