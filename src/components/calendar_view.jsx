@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import FullCalendar, { formatDate } from '@fullcalendar/react'
+import React from "react";
+import FullCalendar  from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 
 function CalendarView({ todoList }) {
-
-    // const [title, changeTitle] = useState("")
 
     const handleEventClick = (e) => {
         e.jsEvent.cancelBubble = true;
