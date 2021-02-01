@@ -67,11 +67,15 @@ Add todo first, and then you can edit details in dropdown.
   <img width="600" height="400" src="./assets/ql-5.png">
 </p>
 
+Easily add a due date and time for your task. 
+
 ### Flag items that are a priority
 
 <p align="center">
   <img width="620" height="300" src="./assets/ql-6.png">
 </p>
+
+Priority marking for todo. 
 
 ### Mark todo items as complete
 
@@ -79,11 +83,15 @@ Add todo first, and then you can edit details in dropdown.
   <img width="800" height="300" src="./assets/ql-7.png">
 </p>
 
+Easily mark-off the todo's you complete. 
+
 ### Attach file to todo item
 
 <p align="center">
   <img width="460" height="400" src="./assets/ql-8.png">
 </p>
+
+Attach any type of file with your todo. File stores on Firebase Storage and can be downloaded again from todo dropdown. 
 
 ### Filtering by Status
 
@@ -91,17 +99,23 @@ Add todo first, and then you can edit details in dropdown.
   <img width="700" height="300" src="./assets/ql-9.png">
 </p>
 
-### Mobile Optimized 
+Easily filter your tasks by incomplete/completed. 
+
+### Mobile-Friendly Design 
 
 <p align="center">
   <img width="375" height="812" src="./assets/ql-mobile.png">
 </p>
+
+Designed with Mobile-Users in mind.
 
 ### Calendar View 
 
 <p align="center">
   <img width="700" height="500" src="./assets/ql-10.png">
 </p>
+
+View task's on calendar view, can be toggled on/off anytime with a click. 
   
 ## Code 
 
