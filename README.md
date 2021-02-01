@@ -115,7 +115,7 @@ Designed with Mobile-Users in mind.
   <img width="700" height="500" src="./assets/ql-10.png">
 </p>
 
-View task's on calendar view, can be toggled on/off anytime with a click. 
+View task's on calendar view, can be toggled on/off anytime with a click. Monthly | Weekly | Daily available. 
   
 ## Code 
 
