@@ -96,6 +96,12 @@ Add todo first, and then you can edit details in dropdown.
 <p align="center">
   <img width="375" height="812" src="./assets/ql-mobile.png">
 </p>
+
+### Calendar View 
+
+<p align="center">
+  <img width="700" height="500" src="./assets/ql-10.png">
+</p>
   
 ## Code 
 
