@@ -52,7 +52,7 @@ Enter task title in the Text Input and click "ADD".
 ### Adding Details to Item
 
 <p align="center">
-  <img width="300" height="50" src="./assets/ql-3-2.png">
+  <img width="600" height="200" src="./assets/ql-4.png">
 </p>
 
 <p align="center">
