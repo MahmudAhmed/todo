@@ -54,10 +54,10 @@
 
 .header > h1 {
     color: #111d5e; 
-    font-family: 'Gloria Hallelujah', cursive;
+    /* font-family: 'Gloria Hallelujah', cursive; */
     margin-bottom: 20px;
     font-size: 2.5rem;
-        /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 
