@@ -234,6 +234,29 @@ View task's on calendar view, can be toggled on/off anytime with a click. Monthl
     }
   ```
 
+  ### Text Field Upgrade 
+
+  ```
+    const handleKeyPress = (e) => {
+      if (e.key === 'Enter') {
+          handleSubmit(e);
+      }
+    }
+
+  ```
+
+  ```
+    <input 
+      name="title"
+      type="text" 
+      placeholder="i.e. get milk" 
+      id="text-input"
+      onChange={handleChange} 
+      value={todo}
+      onKeyPress={handleKeyPress}
+    />
+  ```
+
   ### Stoping Propagation 
 
   To stop the accordian to open up when editing the title of todo.

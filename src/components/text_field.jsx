@@ -14,6 +14,12 @@ function TextField({ addToList, todoList, setTodoList}) {
         }
     }
 
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSubmit(e);
+        }
+    }
+
     return (
         <div className="text-field-container">
             <input 
@@ -23,6 +29,7 @@ function TextField({ addToList, todoList, setTodoList}) {
                 id="text-input"
                 onChange={handleChange} 
                 value={todo}
+                onKeyPress={handleKeyPress}
             />
             <button id="text-field-btn" onClick={handleSubmit}>Add</button>
         </div>
