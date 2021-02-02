@@ -61,6 +61,14 @@ Enter task title in the Text Input and click "ADD".
 
 Add todo first, and then you can edit details in dropdown. 
 
+### Editing Title of Todo
+
+<p align="center">
+  <img width="600" height="400" src="./assets/ql-11.png">
+</p>
+
+Click title and edit, easy as 1,2,3. 
+
 ### Adding Due Date
 
 <p align="center">
