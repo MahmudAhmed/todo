@@ -58,13 +58,14 @@ function App() {
   return (
     <div className="app-container fill-window">
       <div className="app" id="app"> 
-        <Modal ContentComponent={Settings} />
+        
         <Header setCalendarViewMode={setCalendarViewMode} />
         <div className="view-container">
           {calendarViewMode ? <CalendarView todoList={todoList} /> : displayListView()}
         </div>
         <Footer />
         <ClearData setTodoList={setTodoList}/>
+        <Modal ContentComponent={Settings} />
       </div>
     </div>
   );

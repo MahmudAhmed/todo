@@ -461,11 +461,9 @@ input[type="submit"] {
 
 /* Settings Modal */
 
-.modal-container  {
+.modal-container > button  {
     position: absolute;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
+    top: 20px;
 }
 
 .modal-background {
@@ -509,6 +507,7 @@ input[type="submit"] {
 
 .settings-container {
     padding: 20px;
+    padding-bottom: 40px;
 }
 
 #settings-icon {
@@ -628,11 +627,9 @@ input[type="submit"] {
     }
 
     #settings-icon {
-        margin: 10px;
+        margin: 20px;
     }
 
-    .modal-container  {
-        margin-top: -10px;
-    }
+
 }
 
