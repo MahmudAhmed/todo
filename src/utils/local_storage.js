@@ -1,5 +1,8 @@
 // save all tasks to local storage 
-export const saveToLocalStorage = (key, data) => localStorage.setItem(key, JSON.stringify(data));
+export const saveToLocalStorage = (key, data) => {
+    localStorage.setItem(key, (typeof data === 'string') ? data : JSON.stringify(data))
+    
+};
 
 // fetch all tasks from local storage
 export const fetchFromLocalStorage = key => {
@@ -12,7 +15,7 @@ export const fetchFromLocalStorage = key => {
         if (Array.isArray(parsedJSON)) { todoItems = parsedJSON }
     } 
     return todoItems;
-}
+};
 
 // clear data in local storage 
 export const clearLocalStorage = key => localStorage.removeItem(key);

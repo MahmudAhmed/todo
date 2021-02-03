@@ -15,6 +15,8 @@ QuickList minimalistic single page Todo App, built with React. User are able to 
 * HTML5/CSS
 * Webpack
 * Firebase - Storage
+* DOM
+
 
 ## Installation 
 
@@ -124,6 +126,16 @@ Designed with Mobile-Users in mind.
 </p>
 
 View task's on calendar view, can be toggled on/off anytime with a click. Monthly | Weekly | Daily available. 
+
+### Settings
+
+<p align="center">
+  <img width="700" height="500" src="./assets/ql-12.png">
+</p>
+
+You can rename and change the color of your Sticky.  
+
+
   
 ## Code 
 

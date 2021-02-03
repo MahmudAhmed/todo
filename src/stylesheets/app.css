@@ -459,6 +459,68 @@ input[type="submit"] {
     right: 15px;
 }
 
+/* Settings Modal */
+
+
+.modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.modal-content {
+  position:absolute;
+  background: white;
+  width: 60% !important;
+  height: auto !important;
+  border-radius: 0.25rem;
+  min-height: 30%;
+}
+
+.display-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-none {
+    display: none;
+}
+
+#modal-close-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+/* Settings */
+
+.settings-container {
+    padding: 20px;
+}
+
+#settings-icon {
+    font-size: 20px;
+}
+
+#sticky-title-input{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+    padding: 6px 0 7px;
+}
+
+.color-picker-container {
+    margin-top: 10px;
+}
+
+#default-settings-btn {
+    position: absolute;
+    bottom: 10px;
+
+}
 /* Mobile Optimation */
 
 
@@ -555,6 +617,18 @@ input[type="submit"] {
         bottom: 25px;
         right: 30px; */
         display: none;
+    }
+
+    #settings-icon {
+        margin: 10px;
+    }
+
+    .modal-container  {
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        margin-top: -10px;
     }
 }
 
