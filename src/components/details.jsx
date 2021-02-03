@@ -33,7 +33,7 @@ function Details ({ todo, updateTodoInLocalStorage }) {
                 <h2 className="details-h2">Discription</h2>
                 <div title="Edit Discription" id="edit-icon-container" onClick={() => setEditMode(!editMode)}><FontAwesomeIcon id="edit-icon" icon={faEdit} /></div>
             </div>
-            { editMode ? detailsForm() : (todo.details ? <p>{todo.details}</p> : <div id="add-description-text" onClick={() => setEditMode(!editMode)}><p>Click to add a description</p></div>) }
+            { editMode ? detailsForm() : (todo.details ? <p onClick={() => setEditMode(!editMode)}>{todo.details}</p> : <div id="add-description-text" onClick={() => setEditMode(!editMode)}><p>Click to add a description</p></div>) }
         </div>
     )
 }

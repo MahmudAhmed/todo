@@ -47,7 +47,8 @@ function DueDate({ todo, updateTodoInLocalStorage }) {
             </div>
             <div className="due-date-container">
                 {
-                    editMode ? dateSelection() : (dueDate ? <p>{new Date(dueDate).toLocaleDateString('en-US')}</p> : <div id="add-due-date-text" onClick={() => setEditMode(!editMode)}><p>Click to add a due date</p></div>)
+                    editMode ? dateSelection() : (dueDate ? <p onClick={() => setEditMode(!editMode)}>{new Date(dueDate).toLocaleDateString('en-US')}</p> : 
+                        <div id="add-due-date-text" onClick={() => setEditMode(!editMode)}><p>Click to add a due date</p></div>)
                 }
             </div>
 
