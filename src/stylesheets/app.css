@@ -461,6 +461,12 @@ input[type="submit"] {
 
 /* Settings Modal */
 
+.modal-container  {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
 
 .modal-background {
   position: absolute;
@@ -496,6 +502,8 @@ input[type="submit"] {
     right: 20px;
     bottom: 10px;
 }
+
+
 
 /* Settings */
 
@@ -624,10 +632,6 @@ input[type="submit"] {
     }
 
     .modal-container  {
-        position: absolute;
-        z-index: 100;
-        width: 100%;
-        height: 100%;
         margin-top: -10px;
     }
 }
