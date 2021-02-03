@@ -15,7 +15,7 @@ QuickList minimalistic single page Todo App, built with React. User are able to 
 * HTML5/CSS
 * Webpack
 * Firebase - Storage
-* DOM
+* DOM Manipulation
 
 
 ## Installation 
@@ -281,3 +281,18 @@ You can rename and change the color of your Sticky.
       onChange={handleChange} 
     />
   ```
+
+  ### DOM Manipulation
+
+  To stop the accordian to open up when editing the title of todo.
+
+  ```
+    // componentDidMount
+    useEffect(() => {
+      document.getElementById(`app`).style.backgroundColor = bgColor;
+      document.getElementById("sticky-title").textContent = stickyTitle;
+    }, []);
+
+  ```
+
+
