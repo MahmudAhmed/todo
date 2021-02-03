@@ -43,6 +43,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Features 
 
+#### Adding a new todo item
+#### Editing Details to Item
+#### Flag items that are a priority
+#### Mark items as complete
+#### Attach file to todo item
+#### Filtering by Status
+#### Mobile-Friendly Design 
+#### Calendar View 
+#### Rename and change the color of your Sticky.  
+
+
 ### Adding a new todo item
 
 <p align="center">
