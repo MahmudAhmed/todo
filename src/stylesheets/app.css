@@ -503,7 +503,7 @@ input[type="submit"] {
 
 /* Login/Logout */ 
 
-#user-icon {
+#logout-icon {
     font-size: 20px;
 }
 
@@ -515,11 +515,18 @@ input[type="submit"] {
     font-weight: bold;
 }
 
-#form-errors {
+#form-errors, .input-errors {
     text-align: center;
     color: red;
     font-weight: bold;
 }
+
+.input-errors {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
 
 .login-form-container {
     padding: 20px;
@@ -557,6 +564,22 @@ input[type="submit"] {
     border: 1px solid gray;
     border-radius: .25rem;
     width: 100%;
+    padding-left: 40px;
+}
+
+.invalid {
+    border:1px solid #ff0000
+}
+
+.form-input-container {
+    display: flex;
+    position: relative;
+}
+
+#lock-icon, #user-icon {
+    position: absolute;
+    left: 15px;
+    top: 25px;
 }
 
 
