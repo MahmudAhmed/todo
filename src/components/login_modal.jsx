@@ -130,7 +130,7 @@ function LoginModal() {
               type="password"
               name="password"
               value={password}
-              placeholder={"Must be at least 4 characters"}
+              placeholder={"must be at least 4 characters"}
               onChange={e => { changePassword(e.target.value); handlePasswordValidation();}}
               disabled={disabled}
               onKeyPress={handleKeyPress}
