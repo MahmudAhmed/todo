@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCogs } from '@fortawesome/free-solid-svg-icons';
 
 
-function Modal({ContentComponent}) {
+function SettingsModal({ContentComponent}) {
   const [display, toggleDisplay] = useState(false);
 
   const handleToggle = () => {
@@ -30,4 +30,4 @@ function Modal({ContentComponent}) {
   );
 }
 
-export default Modal;
+export default SettingsModal;
