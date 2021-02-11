@@ -6,11 +6,11 @@ function TextField({ addToList, todoList, setTodoList}) {
 
     const handleSubmit = e => {
         e.preventDefault();
-        if(todo !== "") {
+        if(todo.length > 0 && todo.length <= 50) {
             addToList({todo, todoList, setTodoList});
             setTodo("");
         } else {
-            alert("Todo can't be blank!");
+            alert("Todo has to be between 1 to 50 characters long!");
         }
     }
 
