@@ -2,7 +2,6 @@
   "name": "todo_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mahmudahmed.github.io/todo",
   "dependencies": {
     "@date-io/date-fns": "1.x",
     "@fortawesome/fontawesome-free": "^5.12.1",
